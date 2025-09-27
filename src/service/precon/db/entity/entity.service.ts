@@ -1,5 +1,6 @@
 import { Collection, Db, Document, MongoClient } from "mongodb";
 import path from "path";
+import fs from "fs";
 import {
   DataSourceOptions,
   DataSourceService,
@@ -39,9 +40,11 @@ export class EntityDbPreConfiguredService<T extends Document> {
       const mongoConnectionString = new DataSourceService(
         this.options.dataSource
       ).getMongoConnectionString();
-      const resolvedTlsCAFile = this.options.dataSource.tlsCAFile
-        ? path.resolve(process.cwd(), this.options.dataSource.tlsCAFile)
-        : undefined;
+      let resolvedTlsCAFile: string | undefined;
+      if (this.options.dataSource.tlsCAFile) {
+        const caSpec = this.options.dataSource.tlsCAFile;
+        resolvedTlsCAFile = path.resolve(process.cwd(), caSpec);
+      }
       const client = new MongoClient(mongoConnectionString, {
         tls: this.options.dataSource.tls,
         tlsCAFile: resolvedTlsCAFile,

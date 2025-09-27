@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "app/**/route.js": { "includeFiles": "certs/mongo.pem" },
+    "app/**/route.mjs": { "includeFiles": "certs/mongo.pem" },
+    "app/**/route.ts": { "includeFiles": "certs/mongo.pem" },
+    "api/**": { "includeFiles": "certs/mongo.pem" }
+  }
+}
+
+
