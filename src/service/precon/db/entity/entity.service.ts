@@ -43,7 +43,25 @@ export class EntityDbPreConfiguredService<T extends Document> {
       let resolvedTlsCAFile: string | undefined;
       if (this.options.dataSource.tlsCAFile) {
         const caSpec = this.options.dataSource.tlsCAFile;
-        resolvedTlsCAFile = path.resolve(process.cwd(), caSpec);
+        if (caSpec.startsWith("env:")) {
+          const envName = caSpec.slice(4);
+          const b64 = process.env[envName];
+          if (b64 && b64.length > 0) {
+            const tmpPath = "/tmp/mongo-ca.pem";
+            try {
+              fs.writeFileSync(tmpPath, b64, { encoding: "base64" });
+              resolvedTlsCAFile = tmpPath;
+            } catch (e) {
+              console.error("[Mongo] Failed to write CA file to /tmp:", e);
+            }
+          } else {
+            console.warn(
+              `[Mongo] Env var ${envName} is empty or not set; TLS CA will not be applied.`
+            );
+          }
+        } else {
+          resolvedTlsCAFile = path.resolve(process.cwd(), caSpec);
+        }
       }
       const client = new MongoClient(mongoConnectionString, {
         tls: this.options.dataSource.tls,

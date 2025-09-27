@@ -11,5 +11,5 @@ export const pre_db_datasource_$metaforest_mcs_pediatric_dermatology: DataSource
     authSource: "admin",
     replicaSet: "rs01",
     tls: true,
-    tlsCAFile: "env:MONGO_CA_CERT_B64",
+    tlsCAFile: "certs/mongo.pem",
   };
