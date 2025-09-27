@@ -1,0 +1,62 @@
+{
+  "backgroundColor": "rgb(35, 174, 163)",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "labelColor": "rgb(255, 255, 255)",
+  "description": "Карточка участника",
+  "organizationName": "Nikolai Strakhov",
+  "teamIdentifier": "UNQ8TVT6LY",
+  "passTypeIdentifier": "pass.wallet.nickerlan",
+  "webServiceURL": "https://ptq.pw/mg/pderm/wallet-pass/apple-webhook",
+  "authenticationToken": "geepighooHeit9ku",
+  "formatVersion": 1,
+  "coupon": {
+    "headerFields": [
+
+    ],
+    "auxiliaryFields": [
+
+    ],
+    "primaryFields": [
+      {
+        "key": "p1",
+        "label": "",
+        "value": ""
+      }
+    ],
+    "secondaryFields": [
+
+    ],
+    "backFields": [
+
+
+      {
+        "key": "date",
+        "label": "Дата",
+        "value": "10 июня 2023"
+      },
+      {
+        "key": "placeShort",
+        "label": "Место",
+        "value": "Москва или онлайн"
+      },
+      {
+        "key": "website",
+        "label": "Website",
+        "value": "<a href=\"https://pediatric-dermatology.ru/actions/konferentsii/nauchno-prakticheskaya-konferentsiya-s-mezhdunarodnym-uchastiem-dermatologicheskie-chteniya-v-pediat/\">Подробности о событии</a>",
+        "textAlignment": "PKTextAlignmentLeft"
+      },
+      {
+        "key": "datetime",
+        "label": "Время проведения",
+        "value": "10 июня 2023 г. 10:00",
+        "textAlignment": "PKTextAlignmentLeft"
+      },
+      {
+        "key": "place",
+        "label": "Место проведения",
+        "value": "Москва, Кутузовский проспект, 2/1, стр. 1",
+        "textAlignment": "PKTextAlignmentLeft"
+      }
+    ]
+  }
+}
