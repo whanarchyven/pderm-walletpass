@@ -55,7 +55,7 @@ export class AppleWalletPassPreConfiguredService extends PreConfiguredService<Ap
         {
           "icon.png": await getImageBuffer("/pkpass/icon.png"),
           "logo.png": await getImageBuffer("/pkpass/logo.png"),
-          "strip.png": await getImageBuffer("/pkpass/pderm_cover_2025_june_min.png"),
+          "strip.png": await getImageBuffer("/pkpass/pderm_cover_2025_oct_min.png"),
           "pass.json": await getImageBuffer("/pkpass/pass.json"),
         },
 
