@@ -6,7 +6,7 @@
   "organizationName": "Nikolai Strakhov",
   "teamIdentifier": "UNQ8TVT6LY",
   "passTypeIdentifier": "pass.wallet.nickerlan",
-  "webServiceURL": "https://pediatric-dermatology.vercel.app/mg/pderm/wallet-pass/apple-webhook",
+  "webServiceURL": "https://pderm-walletpass.vercel.app/mg/pderm/wallet-pass/apple-webhook",
   "authenticationToken": "geepighooHeit9ku",
   "formatVersion": 1,
   "coupon": {

@@ -3,7 +3,7 @@ import { pre_ext_walletpass_$pediatric } from "@/src/service/precon/ext/wallet-p
 
 export const config_mg_pderm_walletPass_$basic: WalletPassPdermAppOptions = {
   bearerToken: "EifaiTh5IeGhoo3vra3aiZeiJae2oasu",
-  serviceRootUrl: "https://pediatric-dermatology.vercel.app/mg/pderm/wallet-pass",
+  serviceRootUrl: "https://pderm-walletpass.vercel.app/mg/pderm/wallet-pass",
   peer: {
     pre_ext_walletpass: pre_ext_walletpass_$pediatric,
   },

@@ -10,7 +10,7 @@ import axios from "axios";
 
 async function getImageBuffer(url) {
   // const root="http://localhost:3000" //
-  const root = "https://pediatric-dermatology.vercel.app"
+  const root = "https://pderm-walletpass.vercel.app"
   const response = await axios.get(
        root + url,
       {
